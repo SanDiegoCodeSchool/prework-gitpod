@@ -30,4 +30,6 @@ def file_builder(challenge):
         with open(filename, 'w+') as file:
             file.write(eval(content['content']))
         
-file_builder(challenge_lookup("5c4768c3b5bf0ae884977a32"))
+if __name__ == "__main__":
+	challenge_id = os.environ['CHALLENGE_ID']
+	file_builder(challenge_lookup(challenge_id))
