@@ -10,6 +10,10 @@ def challenge_lookup(challenge_id, data_path = "~/workspace/prework-gitpod/data/
     return match[0]
 
 def file_builder(challenge):
+
+    with open('README.md', 'w+') as readme:
+        readme.write(challenge['instructions'])
+
     for file_type in ["html", "css", "js"]:
         
         prefix = {
@@ -19,11 +23,6 @@ def file_builder(challenge):
         }
 
         filename = f'{prefix[file_type]}.{file_type}'
-        
-        try:
-            os.remove(filename)
-        except OSError:
-            pass
         
         content = list(filter(lambda content: content['type'] == file_type, challenge['files']))[0]
         
