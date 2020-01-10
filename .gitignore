@@ -1,1 +1,9 @@
 .DS_store
+.vscode
+.ipynb_checkpoints
+
+prework
+
+index.html
+app.js
+styles.css
