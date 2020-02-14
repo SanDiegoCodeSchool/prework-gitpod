@@ -76,4 +76,7 @@ const blobString = `
     </body>
 </html>
 `
-console.log(blobString)
+fs.writeFile('/workspace/prework-gitpod/live.html', blobString, (err) => {
+    if (err) throw err;
+    console.log('Ready for live preview');
+})
