@@ -11,7 +11,7 @@ def challenge_lookup(challenge_id, data_path = "~/workspace/prework-gitpod/data/
 
 def file_builder(challenge):
 
-    directory = 'prework/' + re.sub('[^A-Za-z0-9]+', '', challenge['title']) + '/'
+    directory = 'prework/' + re.sub('[^A-Za-z0-9 ]+', '', challenge['title']).replace(' ', '_').lower() + '/'
 
     if not os.path.exists(directory):
         os.makedirs(directory)
@@ -37,6 +37,6 @@ def file_builder(challenge):
             file.write(eval(content['content']))
          
 if __name__ == "__main__":
-	challenge_id = os.environ['CHALLENGE_ID']
-	file_builder(challenge_lookup(challenge_id))
-    # file_builder(challenge_lookup("5c4768c3b5bf0ae8849779dd", data_path="data/challenges.json"))
+	# challenge_id = os.environ['CHALLENGE_ID']
+	# file_builder(challenge_lookup(challenge_id))
+    file_builder(challenge_lookup("5c4768c3b5bf0ae884977a32", data_path="data/challenges.json"))
