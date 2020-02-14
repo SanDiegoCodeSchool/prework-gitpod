@@ -1,2 +1,6 @@
 image:
   file: .gitpod.Dockerfile
+
+vscode:
+  extensions:
+    - WakaTime.vscode-wakatime@2.3.0:RuaB2BIq5uwq1uLgb0nfnw==
