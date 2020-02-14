@@ -30,7 +30,7 @@ def file_builder(challenge):
         readme.write(challenge['instructions'])
 
     with open(directory + 'test.js', 'w+') as tests:
-        tests.write(challenge['tests'])
+        tests.write(eval(challenge['tests']))
 
     for file_type in ["html", "css", "js"]:
         prefix = {
