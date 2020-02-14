@@ -4,3 +4,11 @@ image:
 vscode:
   extensions:
     - tht13.html-preview-vscode@0.2.5:ZLi/N2Y+HF6yM7IPnUHBEw==
+
+tasks:
+  - init: echo "hello world"
+    openMode: split-left
+
+ports:
+  - port: 3000
+    onOpen: open-preview
