@@ -6,7 +6,7 @@ vscode:
     - tht13.html-preview-vscode@0.2.5:ZLi/N2Y+HF6yM7IPnUHBEw==
 
 tasks:
-  - init: python3 file_builder.py
+  - init: python3 /workspace/prework-gitpod/scripts/file_builder.py
   
 ports:
   - port: 3000
