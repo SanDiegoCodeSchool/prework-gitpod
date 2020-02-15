@@ -4,6 +4,6 @@
 
 prework
 
-index.html
+*.html
 app.js
 styles.css
