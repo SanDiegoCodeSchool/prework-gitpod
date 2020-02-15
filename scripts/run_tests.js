@@ -1,4 +1,11 @@
-var fs = require("fs");
+const http = require('http');
+const fs = require("fs");
+
+/* 
+
+BUILDS THE HTML FROM INDIVIDUAL FILES, ADDS TESTS
+
+*/
 
 var htmlInput = fs.readFileSync('/workspace/prework-gitpod/prework/commenting/index.html');
 var cssInput = fs.readFileSync('/workspace/prework-gitpod/prework/commenting/styles.css');
@@ -16,7 +23,6 @@ const mochaScripts = `<script src="https://cdn.rawgit.com/jquery/jquery/2.1.4/di
     <script>mocha.setup({ui:'bdd', ignoreLeaks: false});</script>`;
 
 const mochaCSS = '<link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet" />';
-
 const beforeTests = '\nvar expect = chai.expect;\n';
 
 function mochaHelper() {
@@ -53,8 +59,6 @@ function mochaHelper() {
         })`;
   }
 
-
-
 const blobString = `
 <!DOCTYPE HTML><html>
     <head>
@@ -76,7 +80,27 @@ const blobString = `
     </body>
 </html>
 `
+
+/* 
+
+WRITES THE FILE AND SERVES ON PORT 3000
+
+*/
 fs.writeFile('/workspace/prework-gitpod/live.html', blobString, (err) => {
     if (err) throw err;
     console.log('Ready for live preview');
 })
+
+http.createServer(function (req, res) {
+  fs.readFile('/workspace/prework-gitpod/live.html', function (err,data) {
+    
+    if (err) {
+      res.writeHead(404);
+      return;
+    }
+    
+    res.writeHead(200);
+    res.end(data);
+    
+  });
+}).listen(3000);
