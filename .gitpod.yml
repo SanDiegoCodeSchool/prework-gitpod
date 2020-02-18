@@ -5,9 +5,11 @@ vscode:
   extensions:
     - tht13.html-preview-vscode@0.2.5:ZLi/N2Y+HF6yM7IPnUHBEw==
 
+    - rust-lang.rust@0.7.0:X3KqwECt94g8v4GFy+7fxw==
+
 tasks:
   - init: python3 /workspace/prework-gitpod/scripts/file_builder.py
-  
+
 ports:
   - port: 3000
     onOpen: open-preview

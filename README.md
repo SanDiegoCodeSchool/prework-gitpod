@@ -1,5 +1,10 @@
-In the editor, use an addition expression to meet the exit criteria.
+# Welcome to the SDCS Prework on GitPod!
 
-# Exit Criteria:
+## How to use this Online Development Environment:
+- click on stuff until you find what you need
 
-- Declare a variable called `y` and assign to it the result of adding `5` to `10`.
+## What to do if you get stuck:
+- google it you coward
+
+## What is GitPod?
+- The bee's knees
