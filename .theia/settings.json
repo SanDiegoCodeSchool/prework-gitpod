@@ -1,14 +1,14 @@
 {
 	"files.exclude": {
-		"node_modules": true,
-		".gitignore": true,
-		".gitpod.Dockerfile": true,
-		".gitpod.yml": true,
-		"data": true,
-		"package-lock.json": true,
-		"package.json": true,
-		".git": true,
-		"scripts": true,
-		".theia": true
+		// "node_modules": true,
+		// ".gitignore": true,
+		// ".gitpod.Dockerfile": true,
+		// ".gitpod.yml": true,
+		// "data": true,
+		// "package-lock.json": true,
+		// "package.json": true,
+		// ".git": true,
+		// "scripts": true,
+		// ".theia": true
 	}
 }
