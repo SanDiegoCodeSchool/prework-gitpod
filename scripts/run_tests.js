@@ -1,5 +1,6 @@
 const http = require('http');
 const fs = require("fs");
+const { exec } = require("child_process");
 
 /* 
 
@@ -80,7 +81,6 @@ const blobString = `
     </body>
 </html>
 `
-
 /* 
 
 WRITES THE FILE AND SERVES ON PORT 3000
@@ -88,7 +88,11 @@ WRITES THE FILE AND SERVES ON PORT 3000
 */
 fs.writeFile('/workspace/prework-gitpod/live.html', blobString, (err) => {
     if (err) throw err;
-    console.log('Ready for live preview');
+
+    exec('gp preview $(gp url 3000) && gp url 3000', (error, stdout, stderr) => {
+        console.log('Click here to view the results of your test: ' + stdout);
+        console.log(`To re-run the tests, exit the current test session and re-run the test command.\nYou can exit the test session anytime by pressing Control + 'c'`)
+    })
 })
 
 http.createServer(function (req, res) {
@@ -101,6 +105,7 @@ http.createServer(function (req, res) {
     
     res.writeHead(200);
     res.end(data);
+    return;
     
   });
 }).listen(3000);
