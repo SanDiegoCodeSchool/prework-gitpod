@@ -1,0 +1,19 @@
+{
+  "name": "prework-gitpod",
+  "version": "1.0.0",
+  "description": "## How to use this Online Development Environment: - click on stuff until you find what you need",
+  "main": " ",
+  "scripts": {
+    "test": "node /workspace/prework-gitpod/scripts/run_tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SanDiegoCodeSchool/prework-gitpod.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SanDiegoCodeSchool/prework-gitpod/issues"
+  },
+  "homepage": "https://github.com/SanDiegoCodeSchool/prework-gitpod#readme"
+}

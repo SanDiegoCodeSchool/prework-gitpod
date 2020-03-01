@@ -106,5 +106,5 @@ http.createServer(function (req, res) {
 exec('gp preview $(gp url 3000) && gp url 3000', (error, stdout, stderr) => {
     console.log('\n============== LOADING TEST ENVIRONMENT ==============\n')
     console.log('View the results of your test: ' + stdout);
-    console.log(` - To re-run the tests, exit the current test session and re-run the test command.\n\n - You can exit the test session anytime by pressing Control + 'c'`)
+    console.log(` - To re-run the tests, exit the current test session and re-run the test command 'npm test'.\n\n - You can exit the test session anytime by pressing Control + 'c'`)
 })
